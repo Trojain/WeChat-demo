@@ -1,6 +1,6 @@
 # 小程序(第七章)
 
-
+```
 移动设备像素分辨率：
 
 设备		屏幕尺寸   逻辑分辨率(pt)   Reader   物理分辨率(px)   PPI(DPI)
@@ -23,21 +23,23 @@ DPI: 打印行业
 小程序下：
 iphone 6/6S下    1px = 1rpx = 0.5pt
 iphone 6P/6SP下  1px = 0.6rpx
-
+```
 
 
 
 
 
 # 赋值
+```
 this.setData({
 	data:postData
 })
+```
 
 
 
 # 小程序Storage缓存上限不超过10MB
-
+```
 // 设置缓存(localstorage)
 wx.setStorageSync(key, data)    -同步
 wx.setStorage(key, data)        -异步
@@ -56,3 +58,4 @@ wx.removeStorage(key)           -异步
 // 删除所有缓存(localstorage)
 wx.clearStorageSync()           -同步
 wx.clearStorage()               -异步
+```
