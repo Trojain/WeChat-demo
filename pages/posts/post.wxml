@@ -1,0 +1,48 @@
+<!-- 引入模版文件 -->
+<import src="post-item/post-item-template.wxml" />
+
+<view>
+    <!-- 轮播图 -->
+    <swiper vertical='{{vertical}}' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}">
+        <swiper-item>
+            <image src='/images/post/xiaolong.jpg'></image>
+        </swiper-item>
+        <swiper-item>
+            <image src='/images/post/bl.png'></image>
+        </swiper-item>
+        <swiper-item>
+            <image src='/images/post/cat.png'></image>
+        </swiper-item>
+        <swiper-item>
+            <image src='/images/post/sls.jpg'></image>
+        </swiper-item>
+        <swiper-item>
+            <image src='/images/post/vr.png'></image>
+        </swiper-item>
+    </swiper>
+
+    <!-- 循环列表 -->
+    <block wx:for="{{posts_data}}" wx:for-item="i" wx:key="index">
+        <!-- <view class='post-container'>
+            <view class='post-author'>
+                <image class='post-author-img' src='{{i.avatar}}'></image>
+                <text class='post-time'>{{i.dateTime}}</text>
+            </view>
+            <text class='post-title'>{{i.title}}</text>
+            <image class='post-image' src='{{i.headImgSrc}}'></image>
+            <text class='post-content'>{{i.content}}</text>
+            <view class='post-like'>
+                <image class='post-like-img' src='../../images/icon/chat.png'></image>
+                <text class='post-like-font'>{{i.collection}}</text>
+                <image class='post-like-img' src='../../images/icon/view.png'></image>
+                <text class='post-like-font'>{{i.reading}}</text>
+            </view>
+        </view> -->
+
+        <!-- 使用模版文件 -->
+        <view bindtap="postDetail" data-postid="{{i.postId}}">
+            <template is="postItem" data="{{...i}}" />
+        </view>
+    </block>
+
+</view>

@@ -1,0 +1,7 @@
+<view class='container'>
+    <image src='/images/logo.png' class='user-avatar'></image>
+    <text class='user-name'>xia</text>
+    <view class='moto-container' bindtap='onTap'>
+        <text class='moto'>开启</text>
+    </view>
+</view>
